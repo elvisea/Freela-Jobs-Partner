@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
 
 import {
-  TouchableOpacity,
   TouchableWithoutFeedback,
   Keyboard,
-  Image,
   Alert,
 } from 'react-native';
 
 import api from '../../services/api';
-import searchIcon from '../../assets/search-icon.png';
 
 import {
-  CategoryButton,
-  CategoryButtonText,
-  CategoryContainer,
+  Card,
   Container,
+  ContainerBlueDark,
+  ContainerBlueLight,
+  ContainerCards,
+  Description,
   Header,
-  HeaderInput,
-  HeaderTitle,
-  InputContainer,
+  ImageUser,
+  Quantity,
   Title,
 } from './styles';
 import { useAuth } from '../../hooks/auth';
@@ -146,47 +144,30 @@ const Home: React.FC = () => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 
       <Container>
-        <Header>
-          <HeaderTitle>Seja bem vindo!</HeaderTitle>
-          <InputContainer>
+        <Header />
 
-            <Controller
-              name="category"
-              control={control}
-              rules={{
-                required: true,
-              }}
-              render={({ field: { onChange, value } }) => (
-                <HeaderInput
-                  value={value}
-                  onChangeText={onChange}
-                  placeholderTextColor="#787878"
-                  autoCorrect={false}
-                />
-              )}
-            />
+        <ImageUser source={{ uri: user?.data.url_picture }} />
 
-            <TouchableOpacity onPress={handleSubmit(searchCategory)}>
-              <Image source={searchIcon} />
-            </TouchableOpacity>
+        <Title>{user?.data.name}</Title>
 
-          </InputContainer>
-        </Header>
+        <ContainerCards>
+          <Card>
+            {/* <Quantity>10</Quantity>
+            <Description>Descrição</Description> */}
+          </Card>
+          <Card>
+            {/* <Quantity>10</Quantity>
+            <Description>Descrição</Description> */}
+          </Card>
+          <Card>
+            {/* <Quantity>10</Quantity>
+            <Description>Descrição</Description> */}
+          </Card>
+        </ContainerCards>
 
-        <Title>Os mais procurados</Title>
+        <ContainerBlueLight />
+        <ContainerBlueDark />
 
-        <CategoryContainer>
-          {categories?.data.slice(0, 9).map((category) => (
-            <CategoryButton
-              key={category.token}
-              onPress={() => handlePartnersLoad(category.sub_category)}
-            >
-              <CategoryButtonText>
-                {category.sub_category.toUpperCase()}
-              </CategoryButtonText>
-            </CategoryButton>
-          ))}
-        </CategoryContainer>
 
       </Container>
     </TouchableWithoutFeedback>

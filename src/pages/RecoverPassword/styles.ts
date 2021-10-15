@@ -5,7 +5,7 @@ export const Container = styled.View`
   flex: 1;
   align-items: center;
   padding: 0 ${RFValue(20)}px;
-  background-color: #0e4ebb;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Recovery = styled.Text`
