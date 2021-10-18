@@ -7,23 +7,25 @@ import carteiraImg from '../../assets/carteira.png';
 
 import {
   Container,
-  YourBalance,
+  WhiteTitle,
   Value,
-  TextFreelaCoins,
+  Text,
   BlueContainer,
-  TitleBlueContainer,
   TextBlueContainer,
   ShareButton,
   TextShareButton,
-  TopContent,
-  TopBlueContainer,
+  WhiteContainer,
+  TopContainer,
   LeftContent,
   TopValue,
   YellowContainer,
   YellowContentLeft,
   YellowContentRight,
-  TitleYellowContainer,
   TextYellowContainer,
+  Plan,
+  BlueTitle,
+  BottomContainer,
+  TextFreelas,
 } from './styles';
 
 interface Credits {
@@ -53,33 +55,40 @@ const Wallet: React.FC = () => {
   return (
     <Container>
       <Header>Carteira</Header>
-      <TopContent>
-        <Image
-          source={carteiraImg}
-          style={{
-            tintColor: '#0A3FA5',
-            width: 72,
-            height: 70,
-          }}
-        />
 
-        <YourBalance>Seu Saldo</YourBalance>
-        <Value>
-          {!credits?.data ? '0' : credits?.data.credits}
-        </Value>
-        <TextFreelaCoins>
-          Seus Freela Coins podem ser utilizados
-          como desconto em serviços
-        </TextFreelaCoins>
-      </TopContent>
+      <YellowContainer>
+        <WhiteTitle>Seu Plano Atual</WhiteTitle>
+        <Plan>Gold</Plan>
+      </YellowContainer>
+
+      <WhiteContainer>
+        <BlueTitle>Saldo Freela Coins</BlueTitle>
+        <Value>30</Value>
+      </WhiteContainer>
 
       <BlueContainer>
+        <TopContainer>
+          <Text>
+            Indique e ganhe Freela Coins!{'\n'}
+            Ajude seu amigo indicando o melhor app{'\n'}
+            de serviços e ganhe 10 Freela Coins.
+          </Text>
+          <TextFreelas>10</TextFreelas>
+        </TopContainer>
 
-        <TopBlueContainer>
+        <BottomContainer>
+          <ShareButton>
+            <TextShareButton>Compartilhar</TextShareButton>
+          </ShareButton>
+          <ShareButton>
+            <TextShareButton>Copiar e Compartilhar</TextShareButton>
+          </ShareButton>
+        </BottomContainer>
+        {/* <TopBlueContainer>
           <LeftContent>
-            <TitleBlueContainer>
+            <WhiteTitleBlueContainer>
               Indique e ganhe Freela Coins!
-            </TitleBlueContainer>
+            </WhiteTitleBlueContainer>
             <TextBlueContainer>
               Ajude seu amigo indicando o melhor app
               {'\n'}
@@ -92,25 +101,8 @@ const Wallet: React.FC = () => {
 
         <ShareButton>
           <TextShareButton onPress={() => { }}>Compartilhar</TextShareButton>
-        </ShareButton>
+        </ShareButton> */}
       </BlueContainer>
-
-      <YellowContainer>
-
-        <YellowContentLeft>
-          <TitleYellowContainer>
-            Quer ganhar uns
-            {'\n'}
-            Freela coins na faixa?
-          </TitleYellowContainer>
-          <TextYellowContainer>
-            Clique assista e ganhe
-          </TextYellowContainer>
-        </YellowContentLeft>
-
-        <YellowContentRight />
-
-      </YellowContainer>
     </Container>
   );
 };

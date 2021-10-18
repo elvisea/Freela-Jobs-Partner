@@ -9,12 +9,13 @@ export const Container = styled.View`
 
 export const ContainerChat = styled.View`
   flex: 1;
+  width: 100%;
   padding: ${RFValue(16)}px ${RFValue(20)}px;
 `;
 
 export const ContainerCard = styled.View`
-  height: 82px;
-  width: 370px;
+  height: ${RFValue(65)}px;
+  width: 100%;
   border-radius: 17.33px;
   background-color: #fff;
   padding: 0 ${RFValue(12)}px;

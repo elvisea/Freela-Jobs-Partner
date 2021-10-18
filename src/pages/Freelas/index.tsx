@@ -3,6 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native';
 import IconFeather from 'react-native-vector-icons/Feather';
 import { Header } from '../../components/Header';
+import TrashIcon from '../../assets/trash-icon.svg'
 
 import {
   Container,
@@ -30,9 +31,23 @@ export default function Freelas(): JSX.Element {
             </Content>
           </ContentLeft>
           <TouchableOpacity onPress={() => navigation.navigate('Assessment')}>
-            <IconFeather name="more-vertical" color="#0A3FA5" size={28} />
+            <TrashIcon color="#0A3FA5" />
           </TouchableOpacity>
         </ContainerCard>
+
+        <ContainerCard>
+          <ContentLeft>
+            <ImageUser source={{ uri: 'https://github.com/elvisea.png' }} />
+            <Content>
+              <Name>Armin Salahuddin</Name>
+              <Message>Já estou a caminho</Message>
+            </Content>
+          </ContentLeft>
+          <TouchableOpacity onPress={() => navigation.navigate('Assessment')}>
+            <TrashIcon color="#0A3FA5" />
+          </TouchableOpacity>
+        </ContainerCard>
+
       </ContainerChat>
     </Container>
   );

@@ -8,50 +8,106 @@ export const Container = styled.View`
   background-color: #fff;
 `;
 
-export const TopContent = styled.View`
+export const YellowContainer = styled.View`
   align-items: center;
-  margin: ${RFValue(16)}px 0;
+  justify-content: center;
+  width: 100%;
+  background-color: #FFBC00;
+  height: ${RFValue(173)}px;
+  margin-top: ${RFValue(16)}px;
+  padding-top: ${RFValue(12)}px;
+`;
+
+export const WhiteTitle = styled.Text`
+  color: #FFF;
+  font-size: ${RFValue(26)}px;
+  line-height: ${RFValue(33.8)}px;
+  font-family: ${({ theme }) => theme.fonts.bold};
+  line-height: ${RFValue(50)}px; 
+`;
+
+export const Plan = styled.Text`
+  color: #FFF;
+  font-size: ${RFValue(54)}px;
+  line-height: ${RFValue(65)}px; 
+  font-family: ${({ theme }) => theme.fonts.bold};
+`;
+
+export const WhiteContainer = styled.View`
+  align-items: center;
+  justify-content: center;
+  height: ${RFValue(173)}px;
   padding: 0 ${RFValue(16)}px;
 `;
 
-export const YourBalance = styled.Text`
+export const BlueTitle = styled.Text`
   color: #0A3FA5;
-  font-size: ${RFValue(16)}px;
-  line-height: ${RFValue(20.8)}px;
-  margin: ${RFValue(8)}px 0;
+  font-size: ${RFValue(26)}px;
+  line-height: ${RFValue(33.8)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
+  line-height: ${RFValue(50)}px; 
 `;
 
 export const Value = styled.Text`
   color: #0A3FA5;
-  font-size: ${RFValue(46)}px;
-  line-height: ${RFValue(59.8)}px;
-  margin-bottom: ${RFValue(16)}px;
-  font-family: ${({ theme }) => theme.fonts.bold};
-`;
-
-export const TextFreelaCoins = styled.Text`
-  color: #0A3FA5;
-  text-align: center;
-  font-size: ${RFValue(16)}px;
-  line-height: ${RFValue(20.8)}px;
+  font-size: ${RFValue(54)}px;
+  line-height: ${RFValue(65)}px; 
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
 export const BlueContainer = styled.View`
   width: 100%;
-  align-items: center;
-  background-color: #0A3FA5;
   height: ${RFValue(124)}px;
-  padding: ${RFValue(0)}px ${RFValue(24)}px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0A3FA5;
+  padding: ${RFValue(0)}px ${RFValue(20)}px;
 `;
 
-export const TopBlueContainer = styled.View`
+export const TopContainer = styled.View`
   width: 100%; 
+  height: 50px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin: ${RFValue(8)}px ${RFValue(0)}px;
+`;
+
+export const Text = styled.Text`
+  color: #FFF;
+  text-align: center;
+  font-size: ${RFValue(12)}px;
+  line-height: ${RFValue(13)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+`;
+
+export const TextFreelas = styled.Text`
+  color: #FFF;
+  font-size: ${RFValue(50)}px;
+  line-height: ${RFValue(65)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+`;
+
+export const BottomContainer = styled.View`
+  width: 100%; 
+  
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+`;
+
+export const ShareButton = styled(RectButton)`
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFBC00;
+  height: ${RFValue(34)}px;
+  /* width: ${RFValue(131)}px; */
+  border-radius: ${RFValue(26)}px;
+`;
+
+export const TextShareButton = styled.Text`
+  color: #fff;
+  font-size: ${RFValue(10)}px;
+  font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
 export const LeftContent = styled.View`
@@ -82,28 +138,9 @@ export const TopValue = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
-export const ShareButton = styled(RectButton)`
-  align-items: center;
-  justify-content: center;
-  background-color: #FFBC00;
-  height: ${RFValue(34)}px;
-  width: ${RFValue(131)}px;
-  border-radius: ${RFValue(26)}px;
-`;
 
-export const TextShareButton = styled.Text`
-  color: #fff;
-  font-size: ${RFValue(14)}px;
-  font-family: ${({ theme }) => theme.fonts.bold};
-`;
 
-export const YellowContainer = styled.View`
-  width: 100%;
-  background-color: #FFBC00;
-  height: ${RFValue(77)}px;
-  margin-top: ${RFValue(16)}px;
-  padding: ${RFValue(0)} ${RFValue(24)}px;
-`;
+
 
 export const YellowContentLeft = styled.View`
 
