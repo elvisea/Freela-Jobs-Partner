@@ -6,7 +6,7 @@ interface Props {
   isActive: boolean;
 }
 
-export const Container = styled(TouchableOpacity) <Props>`
+export const Container = styled(TouchableOpacity)<Props>`
   align-items: center;
   padding: 4px;
   justify-content: center;

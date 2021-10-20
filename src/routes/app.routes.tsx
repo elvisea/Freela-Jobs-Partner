@@ -16,6 +16,7 @@ import FreelaStore from '../pages/FreelaStore';
 import SearchResult from '../pages/SearchResult';
 import PartnerProfile from '../pages/PartnerProfile';
 import Congratulations from '../pages/Congratulations';
+import Notifications from '../pages/Notifications';
 
 import HomeIcon from '../assets/home-icon.svg';
 import ProfileIcon from '../assets/profile.svg';
@@ -85,9 +86,9 @@ export function AppRoutes() {
             />
 
             <Stack.Screen
-              name="Assessment"
+              name="Notifications"
               options={{ headerShown: false }}
-              component={Assessment}
+              component={Notifications}
             />
 
             {/* <Stack.Screen

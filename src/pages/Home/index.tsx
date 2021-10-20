@@ -1,26 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
+import IconFeather from 'react-native-vector-icons/Feather';
+
+import ChatIcon from '../../assets/chat.svg';
+import AlertIcon from '../../assets/alert.svg';
+import FreelasIcon from '../../assets/freelas.svg';
 
 import {
   TouchableWithoutFeedback,
   Keyboard,
   Alert,
+  View,
 } from 'react-native';
 
 import api from '../../services/api';
 
 import {
-  Card,
+  ButtonCard,
   Container,
   ContainerBlueDark,
   ContainerBlueLight,
-  ContainerCards,
+  ContainerButtons,
   Description,
   Header,
   ImageUser,
   Quantity,
+  Stars,
+  Name,
+  ContentLeft,
+  ContentMiddle,
+  ContentRight,
   Title,
+  Button,
+  TitleButton,
+  Information,
 } from './styles';
 import { useAuth } from '../../hooks/auth';
 
@@ -148,26 +162,108 @@ const Home: React.FC = () => {
 
         <ImageUser source={{ uri: user?.data.url_picture }} />
 
-        <Title>{user?.data.name}</Title>
+        <Name>{user?.data.name}</Name>
 
-        <ContainerCards>
-          <Card>
-            {/* <Quantity>10</Quantity>
-            <Description>Descrição</Description> */}
-          </Card>
-          <Card>
-            {/* <Quantity>10</Quantity>
-            <Description>Descrição</Description> */}
-          </Card>
-          <Card>
-            {/* <Quantity>10</Quantity>
-            <Description>Descrição</Description> */}
-          </Card>
-        </ContainerCards>
+        <Stars onPress={() => navigation.navigate('Notifications')}>
+          <IconFeather
+            name="star"
+            color="#FFBC00"
+            size={18}
+            style={{ marginLeft: 4 }}
+          />
 
-        <ContainerBlueLight />
-        <ContainerBlueDark />
+          <IconFeather
+            name="star"
+            color="#FFBC00"
+            size={18}
+            style={{ marginLeft: 4 }}
+          />
 
+          <IconFeather
+            name="star"
+            color="#FFBC00"
+            size={18}
+            style={{ marginLeft: 4 }}
+          />
+
+          <IconFeather
+            name="star"
+            color="#FFBC00"
+            size={18}
+            style={{ marginLeft: 4 }}
+          />
+
+          <IconFeather
+            name="star"
+            color="#FFBC00"
+            size={18}
+            style={{ marginLeft: 4 }}
+          />
+        </Stars>
+
+        <ContainerButtons>
+
+          <ButtonCard onPress={() => navigation.navigate('Notifications')}>
+            <View style={{ alignItems: 'flex-start', width: '100%' }}>
+              <AlertIcon />
+            </View>
+            <Quantity>1</Quantity>
+            <Description>Avisos</Description>
+          </ButtonCard>
+
+          <ButtonCard onPress={() => navigation.navigate('Chat')}>
+            <View style={{ alignItems: 'flex-start', width: '100%' }}>
+              <ChatIcon />
+            </View>
+            <Quantity>5</Quantity>
+            <Description>Não Lidas</Description>
+          </ButtonCard>
+
+          <ButtonCard onPress={() => navigation.navigate('Freelas')}>
+            <View style={{ alignItems: 'flex-start', width: '100%' }}>
+              <FreelasIcon />
+            </View>
+            <Quantity>2</Quantity>
+            <Description>Serviços</Description>
+          </ButtonCard>
+
+        </ContainerButtons>
+
+        <ContainerBlueLight>
+          <ContentLeft>
+            {/* <FreelasIcon /> */}
+          </ContentLeft>
+          <ContentMiddle>
+            <Title>Promoção!</Title>
+            <Information>
+              Só hoje, 30 Freela Coins por R$25
+            </Information>
+          </ContentMiddle>
+          <ContentRight>
+            <Button onPress={() => navigation.navigate('FreelaStore')}>
+              <TitleButton>Comprar</TitleButton>
+            </Button>
+          </ContentRight>
+        </ContainerBlueLight>
+
+        <ContainerBlueDark>
+          <ContentLeft>
+            {/* <FreelasIcon /> */}
+          </ContentLeft>
+          <ContentMiddle>
+            <Title>Indique e ganhe!</Title>
+            <Information>
+              Indique para seus amigos e
+              ganhe 10 Freela coins por
+              amigo que se cadastrar
+            </Information>
+          </ContentMiddle>
+          <ContentRight>
+            <Button>
+              <TitleButton>Compartilhar</TitleButton>
+            </Button>
+          </ContentRight>
+        </ContainerBlueDark>
 
       </Container>
     </TouchableWithoutFeedback>
