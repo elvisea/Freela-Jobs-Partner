@@ -27,7 +27,7 @@ export default function Freelas(): JSX.Element {
             <ImageUser source={{ uri: 'https://github.com/elvisea.png' }} />
             <Content>
               <Name>Armin Salahuddin</Name>
-              <Message>Já estou a caminho</Message>
+              <Message>Confirmação data 01/05/2021</Message>
             </Content>
           </ContentLeft>
           <TouchableOpacity onPress={() => navigation.navigate('Assessment')}>
@@ -40,7 +40,7 @@ export default function Freelas(): JSX.Element {
             <ImageUser source={{ uri: 'https://github.com/elvisea.png' }} />
             <Content>
               <Name>Armin Salahuddin</Name>
-              <Message>Já estou a caminho</Message>
+              <Message>Confirmação data 01/05/2021</Message>
             </Content>
           </ContentLeft>
           <TouchableOpacity onPress={() => navigation.navigate('Assessment')}>

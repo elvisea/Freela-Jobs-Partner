@@ -79,8 +79,8 @@ export const ContainerBlueLight = styled.View`
   width: 100%;
   flex-direction: row;
   background-color: #2099FD;
-  height: ${RFValue(115)}px;
-  padding: 0 ${RFValue(14)}px;
+  height: 20%;
+  padding: 0 ${RFValue(12)}px;
   margin-bottom: ${RFValue(2)}px;
 `;
 
@@ -88,8 +88,8 @@ export const ContainerBlueDark = styled.View`
   align-items: center;
   width: 100%;
   flex-direction: row;
-  height: ${RFValue(115)}px;
-  padding: 0 ${RFValue(14)}px;
+  height: 20%;
+  padding: 0 ${RFValue(12)}px;
   justify-content: space-around;
   margin-bottom: ${RFValue(2)}px;
   background-color: ${({ theme }) => theme.colors.background};
@@ -100,7 +100,7 @@ export const ContentLeft = styled.View`
 `;
 
 export const ContentMiddle = styled.View`
-  margin: 0 ${RFValue(16)}px;
+  margin-right: ${RFValue(16)}px;
 `;
 
 export const Title = styled.Text`
@@ -114,7 +114,7 @@ export const Title = styled.Text`
 export const Information = styled.Text`
   color: #fff;
   max-width: ${RFValue(165)}px; 
-  font-size: ${RFValue(12)}px;
+  font-size: ${RFValue(11)}px;
   line-height: ${RFValue(15.6)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;

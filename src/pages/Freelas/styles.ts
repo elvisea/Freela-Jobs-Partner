@@ -48,6 +48,6 @@ export const Name = styled.Text`
 
 export const Message = styled.Text`
   color: #0A3FA5;
-  font-size: ${RFValue(12)}px;
+  font-size: ${RFValue(11.5)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;

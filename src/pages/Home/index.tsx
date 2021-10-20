@@ -164,7 +164,7 @@ const Home: React.FC = () => {
 
         <Name>{user?.data.name}</Name>
 
-        <Stars onPress={() => navigation.navigate('Notifications')}>
+        <Stars onPress={() => navigation.navigate('Avaliacoes')}>
           <IconFeather
             name="star"
             color="#FFBC00"
@@ -230,9 +230,9 @@ const Home: React.FC = () => {
         </ContainerButtons>
 
         <ContainerBlueLight>
-          <ContentLeft>
-            {/* <FreelasIcon /> */}
-          </ContentLeft>
+          {/* <ContentLeft>
+            <FreelasIcon />
+          </ContentLeft> */}
           <ContentMiddle>
             <Title>Promoção!</Title>
             <Information>
@@ -247,9 +247,9 @@ const Home: React.FC = () => {
         </ContainerBlueLight>
 
         <ContainerBlueDark>
-          <ContentLeft>
-            {/* <FreelasIcon /> */}
-          </ContentLeft>
+          {/* <ContentLeft>
+            <FreelasIcon />
+          </ContentLeft> */}
           <ContentMiddle>
             <Title>Indique e ganhe!</Title>
             <Information>

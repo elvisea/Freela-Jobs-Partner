@@ -17,6 +17,7 @@ import SearchResult from '../pages/SearchResult';
 import PartnerProfile from '../pages/PartnerProfile';
 import Congratulations from '../pages/Congratulations';
 import Notifications from '../pages/Notifications';
+import Avaliacoes from '../pages/Avaliacoes';
 
 import HomeIcon from '../assets/home-icon.svg';
 import ProfileIcon from '../assets/profile.svg';
@@ -53,7 +54,7 @@ export function AppRoutes() {
         {() => (
           <Stack.Navigator
             initialRouteName="Home"
-            screenOptions={{ animationEnabled: false }}
+            screenOptions={{ animationEnabled: true }}
           >
             <Stack.Screen
               name="Home"
@@ -86,16 +87,16 @@ export function AppRoutes() {
             />
 
             <Stack.Screen
+              name="Avaliacoes"
+              options={{ headerShown: false }}
+              component={Avaliacoes}
+            />
+
+            <Stack.Screen
               name="Notifications"
               options={{ headerShown: false }}
               component={Notifications}
             />
-
-            {/* <Stack.Screen
-              name="Assessment"
-              options={{ headerShown: false }}
-              component={Assessment}
-            /> */}
 
             <Stack.Screen
               name="FreelaStore"
