@@ -6,11 +6,12 @@ import IconFeather from 'react-native-vector-icons/Feather';
 import ChatIcon from '../../assets/chat.svg';
 import AlertIcon from '../../assets/alert.svg';
 import FreelasIcon from '../../assets/freelas.svg';
+import FreelaCoinIcon from '../../assets/freela-coin-icon.svg';
+import FreelaIconPartner from '../../assets/freela-icon-partner.svg';
 
 import {
   TouchableWithoutFeedback,
   Keyboard,
-  Alert,
   View,
 } from 'react-native';
 
@@ -36,11 +37,8 @@ import {
   TitleButton,
   Information,
 } from './styles';
-import { useAuth } from '../../hooks/auth';
 
-interface IDataInput {
-  category: string;
-}
+import { useAuth } from '../../hooks/auth';
 
 interface Categories {
   status: boolean;
@@ -78,11 +76,10 @@ export interface IPartnersByCategory {
 
 const Home: React.FC = () => {
   const { user } = useAuth();
-  console.log(user)
   const [categories, setCategories] = useState<Categories>();
 
   const navigation = useNavigation();
-  const { control, handleSubmit, reset } = useForm();
+  const { reset } = useForm();
 
   useEffect(() => {
     const data = {
@@ -91,68 +88,6 @@ const Home: React.FC = () => {
     api.post('/mobile/requisitions/ReqEmployees.php ', data)
       .then((response) => setCategories(response.data));
   }, []);
-
-  // Input Search
-  async function searchCategory({ category }: IDataInput) {
-    const data = {
-      type: 'list_category',
-      category: '',
-      sub_category: '',
-      is_home_office: '',
-      is_local_office: '',
-      max_price: '',
-      rank: '',
-      max_distance: '150',
-      latitude: '-25.43169',
-      longitude: '-49.22403',
-    };
-
-    data.category = category;
-
-    const response = await api
-      .post('/mobile/requisitions/ReqEmployees.php', data);
-
-    reset(); // reset input
-
-    if (response.data.data.length === 0) {
-      Alert.alert(
-        'Categoria Vazia',
-        'Categoria não possui parceiros. Tente novamente',
-      );
-    } else {
-      navigation.navigate('SearchResult', response.data);
-    }
-  }
-
-  // Button Cards
-  async function handlePartnersLoad(category: string) {
-    const data = {
-      type: 'list_category',
-      category: '',
-      sub_category: '',
-      is_home_office: '',
-      is_local_office: '',
-      max_price: '',
-      rank: '',
-      max_distance: '150',
-      latitude: '-25.43169',
-      longitude: '-49.22403',
-    };
-
-    data.category = category;
-
-    const response = await api
-      .post('/mobile/requisitions/ReqEmployees.php', data);
-
-    if (response.data.data.length === 0) {
-      Alert.alert(
-        'Categoria Vazia',
-        'Categoria não possui parceiros. Tente novamente',
-      );
-    } else {
-      navigation.navigate('SearchResult', response.data);
-    }
-  }
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -230,13 +165,13 @@ const Home: React.FC = () => {
         </ContainerButtons>
 
         <ContainerBlueLight>
-          {/* <ContentLeft>
-            <FreelasIcon />
-          </ContentLeft> */}
+          <ContentLeft>
+            <FreelaCoinIcon width={44} height={44} />
+          </ContentLeft>
           <ContentMiddle>
             <Title>Promoção!</Title>
             <Information>
-              Só hoje, 30 Freela Coins por R$25
+              Só hoje, 30 Freela Coins{'\n'}por R$25
             </Information>
           </ContentMiddle>
           <ContentRight>
@@ -247,15 +182,15 @@ const Home: React.FC = () => {
         </ContainerBlueLight>
 
         <ContainerBlueDark>
-          {/* <ContentLeft>
-            <FreelasIcon />
-          </ContentLeft> */}
+          <ContentLeft>
+            <FreelaIconPartner width={44} height={44} />
+          </ContentLeft>
           <ContentMiddle>
             <Title>Indique e ganhe!</Title>
             <Information>
-              Indique para seus amigos e
-              ganhe 10 Freela coins por
-              amigo que se cadastrar
+              Indique para seus{'\n'}amigos e
+              ganhe 10{'\n'}Freela coins por
+              {'\n'}amigo que se cadastrar
             </Information>
           </ContentMiddle>
           <ContentRight>

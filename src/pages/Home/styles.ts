@@ -75,37 +75,44 @@ export const Description = styled.Text`
 
 export const ContainerBlueLight = styled.View`
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   flex-direction: row;
-  background-color: #2099FD;
-  height: 20%;
+  height: ${RFValue(115)}px;
   padding: 0 ${RFValue(12)}px;
   margin-bottom: ${RFValue(2)}px;
+  background-color: #2099FD;
 `;
 
 export const ContainerBlueDark = styled.View`
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   flex-direction: row;
-  height: 20%;
+  height: ${RFValue(115)}px;
   padding: 0 ${RFValue(12)}px;
-  justify-content: space-around;
   margin-bottom: ${RFValue(2)}px;
   background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const ContentLeft = styled.View`
-
+  align-items: flex-start;
+  justify-content: center;
 `;
 
 export const ContentMiddle = styled.View`
-  margin-right: ${RFValue(16)}px;
+  align-items: flex-start;
+  justify-content: center;
 `;
 
-export const Title = styled.Text`
+export const ContentRight = styled.View`
+  align-items: flex-start;
+  justify-content: center;
+`;
+
+export const Title = styled.Text` 
   color: #fff;
-  font-size: ${RFValue(18)}px;
+  font-size: ${RFValue(16)}px;
   line-height: ${RFValue(26)}px;
   margin-bottom: ${RFValue(4)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
@@ -113,8 +120,7 @@ export const Title = styled.Text`
 
 export const Information = styled.Text`
   color: #fff;
-  max-width: ${RFValue(165)}px; 
-  font-size: ${RFValue(11)}px;
+  font-size: ${RFValue(12)}px;
   line-height: ${RFValue(15.6)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
@@ -135,9 +141,7 @@ export const TitleButton = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
-export const ContentRight = styled.View`
 
-`;
 
 
 

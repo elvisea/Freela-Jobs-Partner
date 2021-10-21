@@ -20,7 +20,7 @@ export default function Notifications(): JSX.Element {
   const navigation = useNavigation();
   return (
     <Container>
-      <Header>Notifications</Header>
+      <Header>Notificações</Header>
       <ContainerChat>
         <ContainerCard>
           <ContentLeft>

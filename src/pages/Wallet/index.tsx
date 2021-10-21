@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Image } from 'react-native';
 import api from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 import { Header } from '../../components/Header';
-import carteiraImg from '../../assets/carteira.png';
 
 import {
   Container,
@@ -11,17 +9,11 @@ import {
   Value,
   Text,
   BlueContainer,
-  TextBlueContainer,
   ShareButton,
   TextShareButton,
   WhiteContainer,
   TopContainer,
-  LeftContent,
-  TopValue,
   YellowContainer,
-  YellowContentLeft,
-  YellowContentRight,
-  TextYellowContainer,
   Plan,
   BlueTitle,
   BottomContainer,

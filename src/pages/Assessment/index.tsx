@@ -7,7 +7,11 @@ import Button from '../../components/Button';
 import { Header } from '../../components/Header';
 import { IRouteParams } from '../Talk';
 import {
-  Container, ImageUser, InputArea, Name, Profession,
+  Container, 
+  ImageUser, 
+  InputArea, 
+  Name, 
+  Profession,
 } from './styles';
 
 interface ITextArea {
