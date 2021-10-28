@@ -36,6 +36,7 @@ export const Plan = styled.Text`
 export const WhiteContainer = styled.View`
   align-items: center;
   justify-content: center;
+  justify-content: center;
   height: ${RFValue(173)}px;
   padding: 0 ${RFValue(16)}px;
 `;
@@ -43,37 +44,36 @@ export const WhiteContainer = styled.View`
 export const BlueTitle = styled.Text`
   color: #0A3FA5;
   font-size: ${RFValue(26)}px;
+  line-height: ${RFValue(50)}px; 
   line-height: ${RFValue(33.8)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
-  line-height: ${RFValue(50)}px; 
 `;
 
 export const Value = styled.Text`
   color: #0A3FA5;
   font-size: ${RFValue(54)}px;
   line-height: ${RFValue(65)}px; 
+  margin-right: ${RFValue(4)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
 export const BlueContainer = styled.View`
   width: 100%;
   height: ${RFValue(124)}px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   background-color: #0A3FA5;
   padding: ${RFValue(0)}px ${RFValue(20)}px;
 `;
 
 export const TopContainer = styled.View`
   width: 100%; 
-  height: 50px;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Text = styled.Text`
   color: #FFF;
-  text-align: center;
   font-size: ${RFValue(12)}px;
   line-height: ${RFValue(13)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
@@ -81,17 +81,16 @@ export const Text = styled.Text`
 
 export const TextFreelas = styled.Text`
   color: #FFF;
-  font-size: ${RFValue(50)}px;
+  font-size: ${RFValue(40)}px;
   line-height: ${RFValue(65)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
 export const BottomContainer = styled.View`
   width: 100%; 
-  
   flex-direction: row;
-  /* align-items: center; */
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const ShareButton = styled(RectButton)`
@@ -100,7 +99,6 @@ export const ShareButton = styled(RectButton)`
   justify-content: center;
   background-color: #FFBC00;
   height: ${RFValue(34)}px;
-  /* width: ${RFValue(131)}px; */
   border-radius: ${RFValue(26)}px;
 `;
 
@@ -137,10 +135,6 @@ export const TopValue = styled.Text`
   line-height: ${RFValue(59.8)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
-
-
-
-
 
 export const YellowContentLeft = styled.View`
 

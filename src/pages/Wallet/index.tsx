@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
 import api from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 import { Header } from '../../components/Header';
+
+import LogoBlue from '../../assets/logo-blue.svg';
+import LogoWhite from '../../assets/freela-icon-partner.svg';
 
 import {
   Container,
@@ -55,7 +59,10 @@ const Wallet: React.FC = () => {
 
       <WhiteContainer>
         <BlueTitle>Saldo Freela Coins</BlueTitle>
-        <Value>30</Value>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Value>30</Value>
+          <LogoBlue width={36} height={36} />
+        </View>
       </WhiteContainer>
 
       <BlueContainer>
@@ -65,35 +72,23 @@ const Wallet: React.FC = () => {
             Ajude seu amigo indicando o melhor app{'\n'}
             de serviços e ganhe 10 Freela Coins.
           </Text>
-          <TextFreelas>10</TextFreelas>
+          <View style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+            <TextFreelas>10</TextFreelas>
+            <LogoWhite width={26} height={26} />
+          </View>
         </TopContainer>
 
         <BottomContainer>
-          <ShareButton>
+          <ShareButton style={{ width: '45%' }}>
             <TextShareButton>Compartilhar</TextShareButton>
           </ShareButton>
-          <ShareButton>
+          <ShareButton style={{ width: '45%' }}>
             <TextShareButton>Copiar e Compartilhar</TextShareButton>
           </ShareButton>
         </BottomContainer>
-        {/* <TopBlueContainer>
-          <LeftContent>
-            <WhiteTitleBlueContainer>
-              Indique e ganhe Freela Coins!
-            </WhiteTitleBlueContainer>
-            <TextBlueContainer>
-              Ajude seu amigo indicando o melhor app
-              {'\n'}
-              de serviços e ganhe 10 Freela coins.
-            </TextBlueContainer>
-          </LeftContent>
-
-          <TopValue>10</TopValue>
-        </TopBlueContainer>
-
-        <ShareButton>
-          <TextShareButton onPress={() => { }}>Compartilhar</TextShareButton>
-        </ShareButton> */}
       </BlueContainer>
     </Container>
   );
