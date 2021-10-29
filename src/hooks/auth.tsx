@@ -65,7 +65,6 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 const AuthProvider: React.FC = ({ children }) => {
   // const [data, setData] = useState<AuthState>({} as AuthState);
   const [user, setUser] = useState<User>(Object);
-  console.log("USER LOGADO => ", user)
 
   useEffect(() => {
     async function loadStorageData(): Promise<void> {
@@ -95,7 +94,7 @@ const AuthProvider: React.FC = ({ children }) => {
     };
 
     const response = await api
-      .post('/mobile/requisitions/ReqLogin.php', data);
+      .post('/mobile_partner/requisitions/ReqLogin.php', data);
     setUser(response.data);
 
     if (response.data.status === false) {

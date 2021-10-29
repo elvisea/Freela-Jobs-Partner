@@ -44,28 +44,30 @@ const SignUp: React.FC = () => {
     mail,
     password,
   }: SignUpFormData) {
+
     const data = {
-      type: 'add',
-      name,
-      surname,
-      cpf,
+      type: "InsertMailUser",
       mail,
       password,
-      birthdate: '12/05/2021', // API Resolver
-      ddd: '',
-      phone: '',
-      rg: '',
-      address: 'Rua Joao Mequetti', // API Resolver
-      complement: '',
-      zipcode: '82640360', // API Resolver
-      address_number: '81', // API Resolver
-      latitude: '-25.3691177',
-      longitude: '-49.2334694',
-      imei: '',
+      name,
+      surname,
+      birthdate: "20/10/2021",
+      rg: "012345678",
+      cpf,
+      ddd: "00",
+      phone: "012345678",
+      ddd_contact: "00",
+      phone_contact: "12345678",
+      address: "Rua Endereço",
+      complement: "Apto 00",
+      address_number: "00",
+      latitude: "-25.3701533",
+      longitude: "-49.1865057",
+      imei: "acdee34dc152c4c8f1a2f7cb8ed442bef860ea87"
     };
 
     const response = await api
-      .post('/mobile/requisitions/ReqUserRegister.php', data);
+      .post('/mobile_partner/requisitions/ReqRegister.php', data);
 
     // Trocar Type: Data.Status da API por Boolean
     if (response.data.status === 'false') {
