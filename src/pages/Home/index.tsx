@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
 import IconFeather from 'react-native-vector-icons/Feather';
 
@@ -79,7 +78,6 @@ const Home: React.FC = () => {
   const [categories, setCategories] = useState<Categories>();
 
   const navigation = useNavigation();
-  const { reset } = useForm();
 
   useEffect(() => {
     const data = {

@@ -5,6 +5,7 @@ import { useAuth } from '../../hooks/auth';
 import { Header } from '../../components/Header';
 
 import LogoBlue from '../../assets/logo-blue.svg';
+import LogoWallet from '../../assets/logo-wallet.svg';
 import LogoWhite from '../../assets/freela-icon-partner.svg';
 
 import {
@@ -13,8 +14,6 @@ import {
   Value,
   Text,
   BlueContainer,
-  ShareButton,
-  TextShareButton,
   WhiteContainer,
   TopContainer,
   YellowContainer,
@@ -22,6 +21,8 @@ import {
   BlueTitle,
   BottomContainer,
   TextFreelas,
+  ShareButton,
+  TextShareButton,
 } from './styles';
 
 interface Credits {
@@ -54,7 +55,10 @@ const Wallet: React.FC = () => {
 
       <YellowContainer>
         <WhiteTitle>Seu Plano Atual</WhiteTitle>
-        <Plan>Gold</Plan>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <LogoWallet width={58} height={58} />
+          <Plan>Gold</Plan>
+        </View>
       </YellowContainer>
 
       <WhiteContainer>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native';
-import IconFeather from 'react-native-vector-icons/Feather';
 import { Header } from '../../components/Header';
 import TrashIcon from '../../assets/trash-icon.svg'
 

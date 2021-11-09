@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native';
-import IconFeather from 'react-native-vector-icons/Feather';
-import { Header } from '../../components/Header';
 import { useAuth } from '../../hooks/auth';
+import { FlatList } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import IconFeather from 'react-native-vector-icons/Feather';
+
+import { Header } from '../../components/Header';
 
 import {
   Container,
@@ -16,7 +18,6 @@ import {
   ContentLeft,
 } from './styles';
 import api from '../../services/api';
-import { FlatList } from 'react-native-gesture-handler';
 
 interface Conversations {
   status: boolean;

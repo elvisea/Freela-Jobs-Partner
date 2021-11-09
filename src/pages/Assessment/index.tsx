@@ -1,5 +1,5 @@
-import { useNavigation, useRoute } from '@react-navigation/core';
 import React from 'react';
+import { useNavigation, useRoute } from '@react-navigation/core';
 import { Alert, View } from 'react-native';
 
 import { Controller, useForm } from 'react-hook-form';
