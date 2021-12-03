@@ -11,6 +11,7 @@ import {
   InProgress,
   OptionsContainer,
 } from './styles';
+// import { fetchAvailableProducts, purchaseUpdateSubscription } from '../../services/purchase';
 
 const FreelaStore: React.FC = () => {
   const { control, handleSubmit } = useForm();
@@ -30,6 +31,14 @@ const FreelaStore: React.FC = () => {
   function handleSelectCard(value: 'debit' | 'credit') {
     setCard(value);
   }
+
+  // useEffect(() => {
+  //   fetchAvailableProducts()
+  // }, [])
+
+  // useEffect(() => {
+  //   purchaseUpdateSubscription()
+  // }, [])
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
